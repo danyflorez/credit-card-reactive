@@ -11,7 +11,7 @@ public class CardController {
     @Autowired
     CardRepository cardRepository;
 
-    @GetMapping(path = "/user/{userId}")
+    @GetMapping(path = "/users/{userId}")
     public Flux<Card> findByUser(@PathVariable("userId") String userId){
         return cardRepository.findByUserId(userId);
     }
